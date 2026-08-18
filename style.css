@@ -1,1 +1,452 @@
+/* =========================
+   RESET
+========================= */
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #000;
+    color: #fff;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 25px 7%;
+
+    background: rgba(0, 0, 0, 0.9);
+
+    border-bottom: 1px solid #222;
+
+    z-index: 1000;
+}
+
+.logo {
+    color: #fff;
+    text-decoration: none;
+
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -2px;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: #aaa;
+    text-decoration: none;
+
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #fff;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 150px 7% 100px;
+
+    border-bottom: 1px solid #222;
+}
+
+.small-text {
+    color: #888;
+
+    font-size: 13px;
+    letter-spacing: 4px;
+
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(60px, 11vw, 150px);
+
+    line-height: 0.85;
+
+    letter-spacing: -7px;
+
+    font-weight: 800;
+}
+
+.hero h1 span {
+    color: #777;
+}
+
+.hero-description {
+    max-width: 600px;
+
+    margin-top: 45px;
+
+    color: #aaa;
+
+    font-size: 18px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+
+    margin-top: 35px;
+}
+
+.button {
+    padding: 14px 25px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.primary {
+    background: #fff;
+    color: #000;
+}
+
+.primary:hover {
+    background: #ccc;
+}
+
+.secondary {
+    border: 1px solid #555;
+    color: #fff;
+}
+
+.secondary:hover {
+    border-color: #fff;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section {
+    padding: 120px 7%;
+
+    border-bottom: 1px solid #222;
+}
+
+.section-number {
+    color: #666;
+
+    font-size: 12px;
+    letter-spacing: 3px;
+
+    margin-bottom: 25px;
+}
+
+.section h2 {
+    font-size: clamp(40px, 6vw, 80px);
+
+    letter-spacing: -3px;
+
+    margin-bottom: 50px;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-content {
+    max-width: 750px;
+}
+
+.about-content p {
+    color: #aaa;
+
+    font-size: 20px;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    border-top: 1px solid #333;
+    border-left: 1px solid #333;
+}
+
+.skill {
+    padding: 40px 25px;
+
+    border-right: 1px solid #333;
+    border-bottom: 1px solid #333;
+
+    font-size: 25px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.skill:hover {
+    background: #fff;
+    color: #000;
+}
+
+
+/* =========================
+   PROJECTS
+========================= */
+
+.projects-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.project-card {
+    min-height: 350px;
+
+    padding: 35px;
+
+    border: 1px solid #333;
+
+    display: flex;
+    flex-direction: column;
+
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    border-color: #fff;
+    transform: translateY(-5px);
+}
+
+.project-number {
+    color: #555;
+
+    font-size: 13px;
+
+    margin-bottom: 60px;
+}
+
+.project-card h3 {
+    font-size: 28px;
+
+    margin-bottom: 20px;
+}
+
+.project-card p {
+    color: #888;
+
+    font-size: 15px;
+}
+
+.project-tags {
+    margin-top: auto;
+
+    display: flex;
+    gap: 10px;
+}
+
+.project-tags span {
+    padding: 6px 12px;
+
+    border: 1px solid #444;
+
+    color: #aaa;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-section {
+    min-height: 70vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-section h2 {
+    margin-bottom: 20px;
+}
+
+.contact-section > p:not(.section-number) {
+    color: #888;
+
+    max-width: 550px;
+
+    font-size: 18px;
+}
+
+.github-link {
+    display: inline-block;
+
+    width: fit-content;
+
+    margin-top: 35px;
+
+    padding: 15px 25px;
+
+    background: #fff;
+
+    color: #000;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.github-link:hover {
+    background: #ccc;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 30px 7%;
+
+    color: #555;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        padding: 20px 5%;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .hero {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .hero h1 {
+        letter-spacing: -4px;
+    }
+
+    .section {
+        padding: 90px 5%;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        min-height: 300px;
+    }
+
+    footer {
+        padding: 25px 5%;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .navbar {
+        position: relative;
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 11px;
+    }
+
+    .hero {
+        min-height: 90vh;
+        padding-top: 80px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: fit-content;
+    }
+
+    .button {
+        text-align: center;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
